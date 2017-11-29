@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaning Animation</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .element {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            background-color: red;
+            animation-name: stretch-animation;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-delay: 0s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+
+        @keyframes stretch-animation {
+            0% {
+                transform: scale(.3);
+                background-color: red;
+                border-radius: 100%;
+            }
+            50%,80% {
+                background-color: orange;
+            }
+            100% {
+                transform: scale(1.5);
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="element"></div>
+</body>
+</html>

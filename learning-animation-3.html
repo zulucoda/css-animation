@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaning Animation</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .element {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            animation: pulse-animation 3s ease infinite alternate,
+                       nudge-animation 5s linear infinite alternate;
+            border-radius: 100%;
+        }
+
+        @keyframes pulse-animation {
+            0%, 100% {
+                background-color: red;
+            }
+            50% {
+                background-color: orange;
+            }
+        }
+
+        @keyframes nudge-animation {
+            0%, 100% {
+                transform: translate(0,0);
+            }
+            50% {
+                transform: translate(150px, 0);
+            }
+            80% {
+                transform: translate(-150px, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="element"></div>
+</body>
+</html>
